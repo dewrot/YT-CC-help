@@ -19,7 +19,7 @@ async function getVideo() {
 };
 
 async function postFile(){
-    //const mimetype = 'audio/mpeg'
+    const mimetype = 'audio/mpeg'
     const blob = await fs.promises.readFile('./video.mp3')
     const url = 'https://tempfiles.ninja/api/upload'
     const response = await fetch(url, { method: 'POST', body: blob, headers: { "Content-Type": mimetype } })
